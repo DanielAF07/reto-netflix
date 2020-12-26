@@ -86,11 +86,16 @@ a {
 
 .button {
     background: white;
+    display: inline-block;
+    width: 100%;
     border-radius: 5px;
     justify-content: center;
     padding: 1vw 0 2.5vw 0;
     text-align: center;
     margin: 2vw 0;
+    border: 0;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .button a {
