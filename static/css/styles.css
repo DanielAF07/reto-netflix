@@ -27,11 +27,12 @@
 }
 
 body {
-    background: black;
+    background: rgba(133,4,23);
     color: white;
     margin: 0;
     font-family: Netflix;
-    padding-bottom: 75px;
+    /* max-width: 400px; */
+    position: relative;
 }
 
 a {
@@ -65,6 +66,11 @@ a {
     margin-top: -85px;
     position: relative;
     overflow: hidden;
+    width: 100%;
+}
+
+.featured video {
+    width: 100%;
 }
 
 .featured-details {
@@ -79,24 +85,26 @@ a {
 .tags {
     /* border: 1px solid red; */
     display: flex;
-    justify-content: space-around;
-    gap: 6px;
+    justify-content: center;
+    gap: 3px;
     list-style: none;
-    padding: 0 10vw;
+    position: relative;
+    top: 20px;
 }
 
 .tag {
     /* border: 1px solid red; */
-    display: flex;
-    font-size: 3vw;
+    margin-left: 0;
+    font-size: 12px;
 }
 
 .tag:before {
     content:'•';
-    margin-right: 6px;
+    margin-right: 4px;
     position: relative;
-    top: 3px;
-    font-size: 2.4vw;
+    top: 1px;
+    font-size: 12px;
+    /* font-size: 2.4vw; */
 }
 
 .tag:first-child::before{
@@ -108,7 +116,6 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 2em;
 }
 
 .button {
@@ -166,10 +173,10 @@ a {
 
 .footer {
     /* border: 1px solid red; */
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0
 }
 
 .list-content {
@@ -193,34 +200,39 @@ a {
 }
 
 .list-title{
-    font-size: 5vw;
+    font-size: 30px;
 }
 
 main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background: #000;
 }
 
 .footer {
     /* border: 1px solid red; */
-    position: fixed;
+    background: rgb(133,4,23);
+    position: sticky;
     bottom: 0;
     left: 0;
     right: 0;
-    background: black;
-    padding: 1em 0 0;
+    /* background: black; */
 }
 
 .tab-list {
     /* border: 1px solid green; */
-    margin: 0;
+    background: black;
+    max-inline-size: 450px;
+    margin: auto;
     padding: 0;
     display: grid;
     grid-auto-flow: column;
     list-style: none;
     color: #6e6e6e;
     padding-bottom: 1em;
+    padding-top: 1em;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .tab-list a{
@@ -251,4 +263,12 @@ main {
 .tab-item:hover path, .tab-item:hover span{
     fill: white;
     color: white;
+}
+
+.app {
+    max-inline-size: 450px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
